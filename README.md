@@ -7,8 +7,6 @@ Uma aplicação de carrinho de compras reativa desenvolvida com **Vanilla JavaSc
 
 O objetivo principal deste projeto foi explorar o poder do método `Array.reduce()` para cálculos financeiros e manipulação de estado no front-end, sem depender de frameworks pesados.
 
-🔗 **[Acesse o Projeto Online Aqui](https://alicia-alexia.github.io/carrinho_compras/)**
-
 
 ---
 
