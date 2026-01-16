@@ -9,6 +9,7 @@ O objetivo principal deste projeto foi explorar o poder do método `Array.reduce
 
 🔗 **[Acesse o Projeto Online Aqui](https://alicia-alexia.github.io/carrinho_compras/)**
 
+
 ---
 
 ## 🖼️ Preview
