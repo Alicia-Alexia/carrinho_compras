@@ -93,4 +93,36 @@ function renderCart() {
     totalEl.textContent = formatCurrency(totals.total);
 }
 
-document.addEventListener('DOMContentLoaded', renderCart);
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderCart();
+
+    const checkoutBtn = document.getElementById('checkout-btn');
+    if (checkoutBtn) {
+        checkoutBtn.addEventListener('click', () => {
+            if (cartItems.length === 0) {
+                alert("Seu carrinho está vazio!");
+                return;
+            }
+
+            const originalText = checkoutBtn.innerText;
+            checkoutBtn.innerText = "Processando...";
+            checkoutBtn.disabled = true;
+
+            setTimeout(() => {
+                const totalValue = document.getElementById('total').innerText;
+                alert(`Parabéns! Sua compra de ${totalValue} foi confirmada.`);
+
+                cartItems = [];
+                renderCart();
+
+                checkoutBtn.innerText = originalText;
+                checkoutBtn.disabled = false;
+            }, 1500);
+        });
+    } else {
+        console.error("Erro: Botão 'checkout-btn' não encontrado no HTML.");
+    }
+});
